@@ -42,28 +42,41 @@ h1{
     font-family: 'Caveat', cursive;
 }
 
-.main_title{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+.main_title p,
+.main_title h1{
     animation: shine 5s linear 2;
     text-transform: uppercase;
     background: linear-gradient(90deg, rgb(87, 53, 9), rgb(216, 140, 25), rgb(87, 53, 9));
     letter-spacing: 5px;
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
-    /* background-repeat: no-repeat; */
+    -webkit-text-fill-color:transparent;
+    background-repeat: no-repeat;
     background-size: 90%;
+}
+
+.main_title{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* animation: shine 5s linear 2;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, rgb(87, 53, 9), rgb(216, 140, 25), rgb(87, 53, 9));
+    letter-spacing: 5px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: -webkit-text-fill-color(transparent);
+    background-repeat: no-repeat;
+    background-size: 90%; */
 }
 
 @keyframes shine {
     0% {
-      background-position-x: -1000%;
+      background-position-x: -100%;
     }
     100% {
-      background-position-x: 1000%;
+      background-position-x: 100%;
     }
   }
 
