@@ -54,7 +54,7 @@ h1{
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     background-size: 90%;
 }
 
@@ -242,4 +242,176 @@ h1{
     color: white;
     text-align: center;
     }
+
+#humburger{
+    display: none;
+    }
+
+
+@media screen and (max-width: 780px){
+
+    header{
+        width: 90%;
+        padding: 10px;
+    }
+
+    body{
+        width: 100%;
+    }
+
+    .travel_box{
+        padding: 0;
+        margin-bottom: 50px;
+    }
+
+   .travel_title{
+       font-size: 35px;
+   }
+
+    .travel_box p{
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .travel_photo{
+        height: 250px;
+        width: 300px;
+    }
+
+    h1{
+        font-size: 65px;
+        padding-top: 100px;
+    }
+
+    .profile_text{
+        flex-direction: column;
+    }
+
+    #profile{
+        font-size: 35px;
+    }
+
+    .profile_list{
+        font-size: 25px;
+    }
+
+    .img{
+        margin-bottom: 100px;
+        margin-right: 0;
+    }
+
+    .travel_text{
+        flex-direction: column;
+    }
+
+    .travel{
+        height: 250vh;
+    }
+
+    .last{
+        font-size: 35px;
+    }
+
+    .button_position{
+        justify-content: center;
+        margin-left: 120px;
+    }
+
+    /* ハンバーガー */
+    .humburger{
+        width: 30px;
+        height: 30px;
+        display: block;
+    }
+
+    .humburger span,
+    .humburger span::after,
+    .humburger span::before{
+        width: 100%;
+        height: 5px;
+        display: block;
+        border-radius: 2px;
+        transition: all .5s ease;
+        background-color: rgb(87, 53, 9);
+    }
+
+    .humburger span{
+        position: relative;
+        top: calc(50% - 2px);
+    }
+
+    .humburger span::before,
+    .humburger span::after{
+        content: '';
+        position: absolute;
+    }
+
+    .humburger span::before{
+        top: -9px;
+    }
+
+    .humburger span::after{
+        top: 9px;
+    }
+
+    #humburger:checked + .humburger span{
+        background-color: transparent;
+    }
+
+    #humburger:checked + .humburger span::before{
+        transform: rotate(45deg) translate(5px,5px);
+    }
+
+    #humburger:checked + .humburger span::after{
+        transform: rotate(-45deg) translate(7px,-8px);
+    }
+
+    #humburger{
+        display: none;
+    }
+
+    .header_left{
+        position: fixed;
+        right: -200px;
+        transition: all .2s ease;
+        width: 30%;
+        top: 70px;
+        background-color: rgba(219, 213, 202, 0.89);
+        height: 300px;
+    }
+
+    .header_left li{
+        padding-bottom: 20px;
+        padding-top: 20px;
+        margin-left: 10px;
+        margin-right: 5px;
+    }
+
+    .header_left a{
+        font-size: 20px;
+        padding-bottom: 15px;
+        padding-top: 10px;
+    }
+
+    #humburger:checked ~ .header_left{
+        right: 0;
+      }
+
+    .header_left ul{
+        display: block;
+    }
+
+    header{
+        position: fixed;
+        overflow: hidden;
+    }
+
+    #things{
+        font-size: 35px;
+    }
+
+    .travel_box h3{
+        font-size: 30px;
+    }
+}
     
